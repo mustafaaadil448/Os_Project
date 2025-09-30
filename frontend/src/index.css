@@ -1,0 +1,106 @@
+/* 🌈 Background with multiple colors */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #ff512f, #dd2476, #6a11cb, #2575fc, #00c9ff, #92fe9d);
+  background-size: 600% 600%;
+  animation: gradientBG 18s ease infinite;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Container */
+.home-container {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+
+/* Rainbow animated heading */
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.rainbow-text {
+  background: linear-gradient(90deg, #ff512f, #dd2476, #6a11cb, #2575fc, #00c9ff, #92fe9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 400% 400%;
+  animation: rainbow 8s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Card Glassmorphism */
+.card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  margin-bottom: 25px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* Result Card */
+.result-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  text-align: left;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+/* Gradient Heading */
+.gradient-heading {
+  background: linear-gradient(90deg, #00f260, #0575e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effect for text */
+.glow-text {
+  background: rgba(0,0,0,0.5);
+  padding: 12px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc, 0 0 12px #00ffaa;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
